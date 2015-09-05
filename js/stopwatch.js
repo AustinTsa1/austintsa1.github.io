@@ -95,4 +95,3 @@ function reset() {
 	stop();
 	x.reset();
 	update();
-}
