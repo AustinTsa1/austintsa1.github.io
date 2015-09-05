@@ -2,52 +2,51 @@
 <head>
 <title>Speech Helper</title>
 <style>
-	#title{
-		color:green;
-		text-align: center;
-	}
 	body{
 		background-color: rgb(190, 190, 245);
 	}
 	#mainBox{
+	#centered{
 		text-align:center;
 	}
 	#center{
 		text-align:center;
+	textarea{
+		display:block;
+		margin-right: auto;
+		margin-left: auto;
+		padding: 1px;
 	}
 </style>
 </head>
-<body>
-<script src = "js/reader/calcRate.js"></script>
-<script src = "js/reader/mespeak.js"></script>
-<script src = "js/reader/readContent.js"></script>
-<script src = "js/reader/runtime.js"></script>
-<script src = "js/reader/wordCount.js"></script>
-
-	<div id='title'>
+@@ -28,8 +31,9 @@
 		<h1>Speech Helper</h1>
 	</div>
-	<p>Speech Helper was created by two ambitious high school students with the dream of helping others with presenting speeches. Speech Helper is designed to help users time their speeches more effectively to present all their content within the desired time limit. Speech Helper will help the user keep track of how many words they are saying per minute and the optimal number of words that should be said per minute. It will also highlight where the user is in their speech in order to help the user keep track when rehearsing.</p>
+	<p>Speech Helper was created by two ambitious high school students with the dream of helping others with presenting speeches. Speech Helper is designed to help users time their speeches more effectively to present all their content within the desired time limit. Speech Helper will help the user keep track of how many words they are saying per minute and the optimal number of words that should be said per minute. It will also highlight where the user is in their speech in order to help the user keep track w...(line truncated)...
  <input type="text" id="speech" size="40" />
 	<button type='button' onclick='read()'>Read my Speech</button>
+
+<textarea rows="10" cols="100" maxlength="1000" placeholder="Write your essay here" name='usersSpeech'></textarea>
+
 <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.0.0/annyang.min.js"></script>
 <script>
 if (annyang) {
-  // Let's define our first command. First the text we expect, and then the function it should call
-  var commands = {
-    'show tps report': function() {
-      $('#tpsreport').animate({bottom: '-100px'});
-    }
-  };
-
-  // Add our commands to annyang
-  annyang.addCommands(commands);
-
-  // Start listening. You can call this here, or attach this call to an event, button, etc.
+@@ -47,7 +51,16 @@ if (annyang) {
   annyang.start();
 }
 </script> -->
 	<button type='button'>Begin Timing</button>
 
+<div id='centered'>
+	<button type="button">Submit</button>	
+	<br><br>
+	<input type="text" id='rate' placeholder='Speech Duration' size='15' />
+	<button type='button' onclick='read()'>Read my Speech</button>
+	<br><br>
+	<button type='button' style='color:blue' style='background-color:red' >Begin Timing</button>
+	<button type='button' style='color:red' style='background-color:blue' >Stop Timing</button>
+	<br><br>
+	<p id='usersSpeech'><p>
+</div>
 </body>
 </html>
