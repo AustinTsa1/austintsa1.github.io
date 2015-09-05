@@ -1,4 +1,4 @@
-var speech = document.getElementById("userSpeech").value;
+var speech = document.getElementById("speech").value;
 
 function submit()
 {

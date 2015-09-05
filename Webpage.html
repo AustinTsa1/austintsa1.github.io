@@ -18,14 +18,20 @@
 </style>
 </head>
 <body>
+<script src = "js/reader/calcRate.js"></script>
+<script src = "js/reader/mespeak.js"></script>
+<script src = "js/reader/readContent.js"></script>
+<script src = "js/reader/runtime.js"></script>
+<script src = "js/reader/wordCount.js"></script>
+
 	<div id='title'>
 		<h1>Speech Helper</h1>
 	</div>
 	<p>Speech Helper was created by two ambitious high school students with the dream of helping others with presenting speeches. Speech Helper is designed to help users time their speeches more effectively to present all their content within the desired time limit. Speech Helper will help the user keep track of how many words they are saying per minute and the optimal number of words that should be said per minute. It will also highlight where the user is in their speech in order to help the user keep track when rehearsing.</p>
-	<form id='mainBox'>
-		<input type='text' name='' style="text-align:center">
+	<form>
+		<input type='text' value='speech' style="text-align:center">
 	</form>
-	<button type='button' onclick='mespeak()'>Repeat my Speech</button>
+	<button type='button' onclick='readContent()'>Repeat my Speech</button>
 <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.0.0/annyang.min.js"></script>
 <script>
 if (annyang) {
