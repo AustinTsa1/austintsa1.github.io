@@ -1,0 +1,9 @@
+var essay = document.getElementById("speech").value;
+var wordCount = 0;
+function countWords(){
+	s = document.getElementById("speech").value;
+	s = s.replace(/(^\s*)|(\s*$)/gi,"");
+	s = s.replace(/[ ]{2,}/gi," ");
+	s = s.replace(/\n /,"\n");
+	wordCount = s.split(' ').length;
+}
