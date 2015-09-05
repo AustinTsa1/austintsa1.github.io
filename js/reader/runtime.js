@@ -9,5 +9,6 @@ function submit()
 
 function read(){
  speech = document.getElementById('speech').value;
+ rate = document.getElementById('rate').value;
 	readContent(speech, rate);
 }
