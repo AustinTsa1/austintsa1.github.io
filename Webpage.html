@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>Speech Helper</title>
+<style>
+	#title{
+		color:green;
+		text-align: center;
+	}
+	body{
+		background-color: rgb(190, 190, 245);
+	}
+	#mainBox{
+		text-align:center;
+	}
+	#center{
+		text-align:center;
+	}
+</style>
+</head>
+<body>
+	<div id='title'>
+		<h1>Speech Helper</h1>
+	</div>
+	<p>Speech Helper was created by two ambitious high school students with the dream of helping others with presenting speeches. Speech Helper is designed to help users time their speeches more effectively to present all their content within the desired time limit. Speech Helper will help the user keep track of how many words they are saying per minute and the optimal number of words that should be said per minute. It will also highlight where the user is in their speech in order to help the user keep track when rehearsing.</p>
+	<form id='mainBox'>
+		<input type='text' name='' style="text-align:center">
+	</form>
+	<button type='button' onclick='mespeak()'>Repeat my Speech</button>
+<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.0.0/annyang.min.js"></script>
+<script>
+if (annyang) {
+  // Let's define our first command. First the text we expect, and then the function it should call
+  var commands = {
+    'show tps report': function() {
+      $('#tpsreport').animate({bottom: '-100px'});
+    }
+  };
+
+  // Add our commands to annyang
+  annyang.addCommands(commands);
+
+  // Start listening. You can call this here, or attach this call to an event, button, etc.
+  annyang.start();
+}
+</script> -->
+	<button type='button'>Begin Timing</button>
+
+</body>
+</html>
