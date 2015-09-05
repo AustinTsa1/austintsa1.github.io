@@ -2,15 +2,16 @@
 <head>
 <title>Speech Helper</title>
 <style>
+	#title{
+		color:green;
+		text-align: center;
+	}
 	body{
 		background-color: rgb(190, 190, 245);
 	}
-	#mainBox{
 	#centered{
 		text-align:center;
 	}
-	#center{
-		text-align:center;
 	textarea{
 		display:block;
 		margin-right: auto;
@@ -19,12 +20,10 @@
 	}
 </style>
 </head>
-@@ -28,8 +31,9 @@
-		<h1>Speech Helper</h1>
-	</div>
-	<p>Speech Helper was created by two ambitious high school students with the dream of helping others with presenting speeches. Speech Helper is designed to help users time their speeches more effectively to present all their content within the desired time limit. Speech Helper will help the user keep track of how many words they are saying per minute and the optimal number of words that should be said per minute. It will also highlight where the user is in their speech in order to help the user keep track w...(line truncated)...
- <input type="text" id="speech" size="40" />
-	<button type='button' onclick='read()'>Read my Speech</button>
+<div id="title">
+	<h1>Speech Helper</h1>
+</div>
+	<p>Speech Helper was created by two ambitious high school students with the dream of helping others with presenting speeches. Speech Helper is designed to help users time their speeches more effectively to present all their content within the desired time limit. Speech Helper will help the user keep track of how many words they are saying per minute and the optimal number of words that should be said per minute. It will also highlight where the user is in their speech in order to help the user keep track of where they are</p>
 
 <textarea rows="10" cols="100" maxlength="1000" placeholder="Write your essay here" name='usersSpeech'></textarea>
 
@@ -35,7 +34,6 @@ if (annyang) {
   annyang.start();
 }
 </script> -->
-	<button type='button'>Begin Timing</button>
 
 <div id='centered'>
 	<button type="button">Submit</button>	
