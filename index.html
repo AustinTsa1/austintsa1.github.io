@@ -19,14 +19,17 @@
 		padding: 1px;
 	}
 </style>
+<meta charset="UTF-8">
 
 </head>
-<body>
+<body onload="show();">
 <script src = "js/reader/mespeak.js"></script>
 <script src = "js/reader/calcRate.js"></script>
 <script src = "js/reader/readContent.js"></script>
 <script src = "js/reader/runtime.js"></script>
 <script src = "js/reader/wordCount.js"></script>
+<script src= "js/stopwatch.js"></script>
+
 <div id="title">
 	<h1>Speech Helper</h1>
 </div>
@@ -41,16 +44,41 @@ if (annyang) {
   annyang.start();
 }
 </script> -->
+<!--
+<input onblur="textCounter(this.form.recipients,this,306);" disabled  onfocus="this.blur();" tabindex="999" maxlength="3" size="3" value="306" name="counter">
+<textarea onblur="textCounter(this,this.form.counter,306);" onkeyup="textCounter(this,this.form.counter,306);" style="WIDTH: 608px; HEIGHT: 94px" name="message" rows="1" cols="15" >
+</textarea>
+<script>
+function textCounter( field, countfield, maxlimit ) {
+ if ( field.value.length > maxlimit ) {
+  field.value = field.value.substring( 0, maxlimit );
+  field.blur();
+  field.focus();
+  return false;
+ } else {
+  countfield.value = maxlimit - field.value.length;
+ }
+}
+</script>
+-->
+
 
 <div id='centered'>
+
 	<button type="button">Submit</button>	
 	<br><br>
 	<input type="text" id='rate' placeholder='Speech Duration' size='15' />
 	<button type='button' onclick='read()'>Read my Speech</button>
 	<br><br>
-	<button type='button' style='color:blue' style='background-color:red' >Begin Timing</button>
-	<button type='button' style='color:red' style='background-color:blue' >Stop Timing</button>
-	<br><br>
+
+<div>Time: 
+	<span id="time"></span>
+</div>
+	<input type="button" value="start" onclick="start();">
+	<input type="button" value="stop" onclick="stop();">
+	<input type="button" value="reset" onclick="reset()">
+<br><br>
+
 	<p id='usersSpeech'><p>
 </div>
 </body>
