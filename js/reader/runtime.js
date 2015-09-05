@@ -1,8 +1,13 @@
 var speech = "";
+var wordCount = 0;
 function submit(){
+	 
+	 
 	 speech = document.getElementById('speech').value;
-	document.getElementById("userSpeech").innerHTML = speech;
-
+	 wordCount = countWords(speech);
+	 console.log(wordCount);
+	// document.getElementById("userSpeech").innerHTML = speech;
+x
 	// document.getElementById("wordCount").innerHTML = "Words: "+wordCount;
 }
 
