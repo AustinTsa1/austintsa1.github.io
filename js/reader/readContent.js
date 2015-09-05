@@ -1,7 +1,9 @@
 function readContent(speech, rate){
-meSpeak.loadConfig("mespeak_config.json");
-    meSpeak.loadVoice("voices/en/en.json");
-    meSpeak.speak(this.speech, {speed: rate});
+
+meSpeak.loadConfig("js/reader/mespeak_config.json");
+    meSpeak.loadVoice("js/reader/voices/en/en.json");
+     console.log(speech);
+    meSpeak.speak('this is the ultimate showdown');
   
     function loadVoice(id) {
       var fname="voices/"+id+".json";
