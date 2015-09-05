@@ -25,7 +25,7 @@
 	<form id='mainBox'>
 		<input type='text' name='' style="text-align:center">
 	</form>
-	<button type='button' onclick='mespeak()'>Click</button>
+	<button type='button' onclick='mespeak()'>Repeat my Speech</button>
 <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.0.0/annyang.min.js"></script>
 <script>
 if (annyang) {
