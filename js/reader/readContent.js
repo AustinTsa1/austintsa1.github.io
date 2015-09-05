@@ -3,7 +3,7 @@ function readContent(speech, rate){
 meSpeak.loadConfig("js/reader/mespeak_config.json");
     meSpeak.loadVoice("js/reader/voices/en/en.json");
      console.log(speech);
-    meSpeak.speak('this is the ultimate showdown');
+    meSpeak.speak(speech);
   
     function loadVoice(id) {
       var fname="voices/"+id+".json";
