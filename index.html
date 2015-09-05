@@ -19,13 +19,20 @@
 		padding: 1px;
 	}
 </style>
+
 </head>
+<body>
+<script src = "js/reader/mespeak.js"></script>
+<script src = "js/reader/calcRate.js"></script>
+<script src = "js/reader/readContent.js"></script>
+<script src = "js/reader/runtime.js"></script>
+<script src = "js/reader/wordCount.js"></script>
 <div id="title">
 	<h1>Speech Helper</h1>
 </div>
 	<p>Speech Helper was created by two ambitious high school students with the dream of helping others with presenting speeches. Speech Helper is designed to help users time their speeches more effectively to present all their content within the desired time limit. Speech Helper will help the user keep track of how many words they are saying per minute and the optimal number of words that should be said per minute. It will also highlight where the user is in their speech in order to help the user keep track of where they are</p>
 
-<textarea rows="10" cols="100" maxlength="1000" placeholder="Write your essay here" name='usersSpeech'></textarea>
+<textarea rows="10" cols="100" maxlength="1000" placeholder="Write your essay here" name='usersSpeech' id='speech'></textarea>
 
 <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.0.0/annyang.min.js"></script>
 <script>

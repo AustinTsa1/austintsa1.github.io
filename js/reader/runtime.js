@@ -1,10 +1,9 @@
-var speech = ""
-function submit()
-{
-
+var speech = "";
+function submit(){
+	 speech = document.getElementById('speech').value;
 	document.getElementById("userSpeech").innerHTML = speech;
-	console.log('hi');
-	document.getElementById("wordCount").innerHTML = "Words: "+wordCount;
+
+	// document.getElementById("wordCount").innerHTML = "Words: "+wordCount;
 }
 
 function read(){
