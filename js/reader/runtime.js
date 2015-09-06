@@ -12,6 +12,6 @@ x
 
 function read(){
  speech = document.getElementById('speech').value;
- rate = document.getElementById('rate').value;
+ rate = document.getElementById('rpm').value;
 	readContent(speech, rate);
 }

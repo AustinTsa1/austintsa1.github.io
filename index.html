@@ -82,6 +82,7 @@ x		}
 			document.getElementById("totalWords").innerHTML = "Total Words : " + wordCount;
 		}
 		function wordsPerMinute(){
+			calcRate();
 			document.getElementById("wordsMinute").innerHTML = "# of words spoken per minute : " + rate;
 		}
 </script>
@@ -91,7 +92,7 @@ x		}
 	<p = id='totalWords'></p>
 	<p = id='wordsMinute'></p>
 	<br>
-	<input type="text" id='rate' placeholder='Speech Duration (minutes)' size='25' />
+	<input type="text" id='rpm' placeholder='Speech Duration (minutes)' size='25' />
 	<button type='button' onclick='read()'>Read my Speech</button>
 	<br><br>
 
