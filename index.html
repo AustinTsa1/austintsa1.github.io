@@ -7,6 +7,7 @@
 		text-align: center;
 	}
 	body{
+		font-family:"Verdana", "sans-serif";
 		background-color: rgb(190, 190, 245);
 	}
 	#centered{
@@ -17,6 +18,14 @@
 		margin-right: auto;
 		margin-left: auto;
 		padding: 1px;
+	}
+	.noSelect{
+		-webkit-touch-callout:none;
+		-webkit-user-select:none;
+		-khtml-user-select:none;
+		-moz-user-select:none;
+		-ms-user-select:none;
+		user-select:none;
 	}
 </style>
 <meta charset="UTF-8">
@@ -67,15 +76,22 @@ function textCounter( field, countfield, maxlimit ) {
 
 <script>
 		function speechCopy(){
-		document.getElementById("copyOfSpeech").innerHTML = speech;
+			document.getElementById("copyOfSpeech").innerHTML = speech;
 x		}
+		function maxWords(){
+			document.getElementById("totalWords").innerHTML = "Total Words : " + wordCount;
+		}
+		function wordsPerMinute(){
+			document.getElementById("wordsMinute").innerHTML = "# of words spoken per minute : " + rate;
+		}
 </script>
 
-	<button type="button" onclick = "submit(); speechCopy();">Submit</button>	
-	<h2>Word Count</h2>
+	<button type="button" onclick = "submit(); speechCopy(); maxWords(); wordsPerMinute();">Submit</button>	
+
 	<p = id='totalWords'></p>
+	<p = id='wordsMinute'></p>
 	<br>
-	<input type="text" id='rate' placeholder='Speech Duration' size='15' />
+	<input type="text" id='rate' placeholder='Speech Duration (minutes)' size='25' />
 	<button type='button' onclick='read()'>Read my Speech</button>
 	<br><br>
 
@@ -87,7 +103,7 @@ x		}
 	<input type="button" value="reset" onclick="reset();">
 <br><br>
 
-<p id="copyOfSpeech"></p>
+<p id="copyOfSpeech" class="noSelect"></p>
 
 </div>
 </body>
