@@ -3,7 +3,7 @@
 <title>Speech Helper</title>
 <style>
 	#title{
-		color:green;
+		color:red;
 		text-align: center;
 	}
 	body{
@@ -28,14 +28,14 @@
 <script src = "js/reader/readContent.js"></script>
 <script src = "js/reader/runtime.js"></script>
 <script src = "js/reader/wordCount.js"></script>
-<script src= "js/stopwatch.js"></script>
+<script src = "js/stopwatch.js"></script>
 
 <div id="title">
 	<h1>Speech Helper</h1>
 </div>
-	<p>Speech Helper was created by two ambitious high school students with the dream of helping others with presenting speeches. Speech Helper is designed to help users time their speeches more effectively to present all their content within the desired time limit. Speech Helper will help the user keep track of how many words they are saying per minute and the optimal number of words that should be said per minute. It will also highlight where the user is in their speech in order to help the user keep track of where they are</p>
+	<p>Speech Helper was created by two ambitious high school students with the dream of helping others with presenting speeches. Speech Helper is designed to help users time their speeches more effectively to present all their content within the desired time limit. Speech Helper will tell the user the optimal words that need to be said per minute. It will also highlight where the user should be in their speech in order to help the user keep better track of their time.</p>
 
-<textarea rows="10" cols="100" maxlength="1000" placeholder="Write your essay here" name='usersSpeech' id='speech'></textarea>
+<textarea rows="10" cols="100" maxlength="100000" placeholder="Write your essay here" id='speech'></textarea>
 
 <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.0.0/annyang.min.js"></script>
 <script>
@@ -65,7 +65,15 @@ function textCounter( field, countfield, maxlimit ) {
 
 <div id='centered'>
 
-	<button type="button" onclick = "submit()">Submit</button>	
+<script>
+		function speechCopy(){
+		document.getElementById("copyOfSpeech").innerHTML = speech;
+x		}
+</script>
+
+	<button type="button" onclick = "submit(); speechCopy();">Submit</button>	
+	<h2>Word Count</h2>
+	<p = id='totalWords'></p>
 	<br><br>
 	<input type="text" id='rate' placeholder='Speech Duration' size='15' />
 	<button type='button' onclick='read()'>Read my Speech</button>
@@ -76,10 +84,11 @@ function textCounter( field, countfield, maxlimit ) {
 </div>
 	<input type="button" value="start" onclick="start();">
 	<input type="button" value="stop" onclick="stop();">
-	<input type="button" value="reset" onclick="reset()">
+	<input type="button" value="reset" onclick="reset();">
 <br><br>
 
-	<p id='usersSpeech'><p>
+<p id="copyOfSpeech"></p>
+
 </div>
 </body>
 </html>

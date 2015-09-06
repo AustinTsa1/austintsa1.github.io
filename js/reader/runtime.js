@@ -6,6 +6,7 @@ function submit(){
 	 speech = document.getElementById('speech').value;
 	 wordCount = countWords(speech);
 	 console.log(wordCount);
+	 document.getElementById('totalWords').innerHTML = wordCount;
 	// document.getElementById("userSpeech").innerHTML = speech;
 x
 	// document.getElementById("wordCount").innerHTML = "Words: "+wordCount;
