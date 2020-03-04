@@ -4,3 +4,4 @@ Regardless of age, everyone will have to do presentations in their lifetimes and
 SpeechHelper will help people in rehearsing because they will be able to manage their time better and use their pauses more effectively.
 Currently, this application works only on Firefox. It is confirmed not to work on Chrome and Internet Explorer/Edge.
 Site can be found at http://www.speechhelper.co/
+Help Me
